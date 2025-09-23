@@ -1,0 +1,136 @@
+/* Responsive overrides para Infinita Design
+   Solo bajo breakpoints, sin tocar desktop. */
+
+/* --- 1024px (Tablet Landscape) --- */
+@media (max-width: 1024px) {
+  .mil-services-grid, .mil-videos-responsive, .mil-photo-row {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 16px !important;
+    max-width: 100% !important;
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+  .mil-services-grid .mil-services-grid-item,
+  .mil-videos-responsive .mil-video-block,
+  .mil-photo-row .mil-photo-item {
+    flex: 0 0 48%;
+    max-width: 48%;
+    margin-bottom: 16px;
+  }
+  .mil-partner-frame {
+    width: 120px !important;
+  }
+}
+
+/* --- 768px (Tablet Portrait/Phablet) --- */
+@media (max-width: 768px) {
+  .mil-main-menu { display: none !important; }
+  .mil-menu-btn { 
+    display: block !important; 
+    z-index: 1000; 
+    background: none !important;
+    border: none !important;
+    box-shadow: none !important;
+  }
+  .mil-menu-btn span, .mil-menu-btn span:after, .mil-menu-btn span:before { 
+    height: 4px; 
+    background: #fff !important;
+    border: none !important;
+    box-shadow: none !important;
+  }
+  .mil-menu-frame.mil-mobile-open { left: 0; right: 0; top: 0; bottom: 0; position: fixed; background: #181818; }
+  .mil-menu-frame.mil-mobile-open .mil-main-menu { display: block !important; position: absolute; top: 60px; left: 0; right: 0; background: #181818; }
+  .mil-menu-frame.mil-mobile-open .mil-menu-content { display: block; }
+  .mil-menu-frame .mil-menu-btn { width: 48px; height: 48px; }
+  .mil-services-grid, .mil-videos-responsive, .mil-photo-row {
+    flex-direction: column !important;
+    gap: 12px !important;
+    padding-left: 4px;
+    padding-right: 4px;
+  }
+  .mil-services-grid .mil-services-grid-item,
+  .mil-videos-responsive .mil-video-block,
+  .mil-photo-row .mil-photo-item {
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-bottom: 12px;
+  }
+  .mil-partner-frame {
+    width: 80px !important;
+  }
+  h1, .mil-h1 { font-size: clamp(2rem, 6vw, 2.5rem); }
+  h2, .mil-h2 { font-size: clamp(1.5rem, 5vw, 2rem); }
+  h3, .mil-h3 { font-size: clamp(1.2rem, 4vw, 1.5rem); }
+  p, .mil-light-soft, .mil-muted { font-size: clamp(1rem, 3vw, 1.1rem); }
+  .mil-banner-content, .mil-p-120-0, .mil-p-120-30, .mil-p-120-60, .mil-p-120-120 {
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+    padding-top: 32px !important;
+    padding-bottom: 32px !important;
+  }
+  .mil-frame-bottom, .mil-footer {
+    padding-bottom: env(safe-area-inset-bottom, 16px) !important;
+  }
+  input, textarea, select {
+    width: 100% !important;
+    min-height: 44px !important;
+    font-size: 1rem !important;
+  }
+  .mil-table {
+    overflow-x: auto !important;
+    display: block !important;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+/* --- 480px (Móvil Chico) --- */
+@media (max-width: 480px) {
+  .mil-services-grid, .mil-videos-responsive, .mil-photo-row {
+    flex-direction: column !important;
+    gap: 8px !important;
+    padding-left: 2px;
+    padding-right: 2px;
+  }
+  .mil-services-grid .mil-services-grid-item,
+  .mil-videos-responsive .mil-video-block,
+  .mil-photo-row .mil-photo-item {
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-bottom: 8px;
+  }
+  h1, .mil-h1 { font-size: clamp(1.5rem, 8vw, 2rem); }
+  h2, .mil-h2 { font-size: clamp(1.2rem, 7vw, 1.5rem); }
+  h3, .mil-h3 { font-size: clamp(1rem, 6vw, 1.2rem); }
+  p, .mil-light-soft, .mil-muted { font-size: clamp(0.95rem, 4vw, 1rem); }
+  .mil-banner-content, .mil-p-120-0, .mil-p-120-30, .mil-p-120-60, .mil-p-120-120 {
+    padding-left: 4px !important;
+    padding-right: 4px !important;
+    padding-top: 16px !important;
+    padding-bottom: 16px !important;
+  }
+  .mil-frame-bottom, .mil-footer {
+    padding-bottom: env(safe-area-inset-bottom, 8px) !important;
+  }
+}
+
+/* --- Imágenes, videos, embeds --- */
+img, video, iframe {
+  max-width: 100% !important;
+  height: auto !important;
+  object-fit: cover;
+  border-radius: 12px;
+}
+video {
+  aspect-ratio: 9/16;
+  background: #181818;
+}
+
+/* --- Accesibilidad y motion --- */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
